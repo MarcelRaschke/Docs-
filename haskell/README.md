@@ -24,8 +24,10 @@ WARNING:
 
 # Supported tags and respective `Dockerfile` links
 
--	[`9.8.2-buster`, `9.8-buster`, `9-buster`, `buster`, `9.8.2`, `9.8`, `9`, `latest`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.8/buster/Dockerfile)
--	[`9.8.2-slim-buster`, `9.8-slim-buster`, `9-slim-buster`, `slim-buster`, `9.8.2-slim`, `9.8-slim`, `9-slim`, `slim`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.8/slim-buster/Dockerfile)
+-	[`9.10.1-buster`, `9.10-buster`, `9-buster`, `buster`, `9`, `latest`](https://github.com/haskell/docker-haskell/blob/ca3084159e14e2a753fe633789347a9d8633e5ea/9.10/buster/Dockerfile)
+-	[`9.10.1-slim-buster`, `9.10-slim-buster`, `9-slim-buster`, `slim-buster`, `9-slim`, `slim`](https://github.com/haskell/docker-haskell/blob/ca3084159e14e2a753fe633789347a9d8633e5ea/9.10/slim-buster/Dockerfile)
+-	[`9.8.2-buster`, `9.8-buster`, `9.8.2`, `9.8`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.8/buster/Dockerfile)
+-	[`9.8.2-slim-buster`, `9.8-slim-buster`, `9.8.2-slim`, `9.8-slim`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.8/slim-buster/Dockerfile)
 -	[`9.6.5-buster`, `9.6-buster`, `9.6.5`, `9.6`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.6/buster/Dockerfile)
 -	[`9.6.5-slim-buster`, `9.6-slim-buster`, `9.6.5-slim`, `9.6-slim`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.6/slim-buster/Dockerfile)
 -	[`9.4.8-buster`, `9.4-buster`, `9.4.8`, `9.4`](https://github.com/haskell/docker-haskell/blob/a722a82c30fa5e321bae769bbd7720e3a3ba874e/9.4/buster/Dockerfile)
@@ -169,8 +171,6 @@ The `haskell` images come in many flavors, each designed for a specific use case
 ## `haskell:<version>`
 
 This is the defacto image. If you are unsure about what your needs are, you probably want to use this one. It is designed to be used both as a throw away container (mount your source code and start the container to start your app), as well as the base to build other images off of.
-
-Some of these tags may have names like buster in them. These are the suite code names for releases of [Debian](https://wiki.debian.org/DebianReleases) and indicate which release the image is based on. If your image needs to install any additional packages beyond what comes with the image, you'll likely want to specify one of these explicitly to minimize breakage when there are new releases of Debian.
 
 This tag is based off of [`buildpack-deps`](https://hub.docker.com/_/buildpack-deps/). `buildpack-deps` is designed for the average user of Docker who has many images on their system. It, by design, has a large number of extremely common Debian packages. This reduces the number of packages that images that derive from it need to install, thus reducing the overall size of all images on your system.
 
